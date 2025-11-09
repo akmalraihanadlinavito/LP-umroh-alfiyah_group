@@ -11,7 +11,7 @@ const HeroCarousel = () => {
   
   const slides = [
     {
-      image: '/kakbah.jpg',
+      image: '/assets/kakbah.jpg',
       title: t('slide.makkah.title'),
       subtitle: t('slide.makkah.subtitle')
     },

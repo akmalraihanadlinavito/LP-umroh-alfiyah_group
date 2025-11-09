@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors - Emerald Green (Islamic symbolism) */
+    --primary: 160 84% 39%;           /* Emerald green */
+    --primary-foreground: 0 0% 100%;  /* White text on primary */
+
+    /* Accent Colors - Gold (Luxury & Premium) */
+    --accent: 43 74% 66%;             /* Warm gold */
+    --accent-foreground: 0 0% 0%;     /* Black text on accent */
+
+    /* Background & Surface */
+    --background: 0 0% 98%;           /* Soft white */
+    --foreground: 222 47% 11%;        /* Dark blue-gray text */
+
+    /* Muted & Secondary */
+    --muted: 210 40% 96%;             /* Light gray */
+    --muted-foreground: 215 16% 47%;  /* Medium gray text */
+
+    /* Border & Input */
+    --border: 214 32% 91%;            /* Light border */
+    --input: 214 32% 91%;             /* Input border */
+    --ring: 160 84% 39%;              /* Focus ring (same as primary) */
+
+    /* Destructive (for errors) */
+    --destructive: 0 84% 60%;         /* Red */
+    --destructive-foreground: 0 0% 100%;
+
+    /* Card */
+    --card: 0 0% 100%;                /* White card background */
+    --card-foreground: 222 47% 11%;   /* Dark text on card */
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Secondary */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Primary Colors - Emerald Green (Islamic symbolism) */
+    --primary: 160 84% 45%;           /* Brighter emerald for dark mode */
+    --primary-foreground: 0 0% 100%;  /* White text on primary */
+
+    /* Accent Colors - Gold (Luxury & Premium) */
+    --accent: 43 74% 70%;             /* Brighter gold */
+    --accent-foreground: 0 0% 0%;     /* Black text on accent */
+
+    /* Background & Surface */
+    --background: 222 47% 8%;         /* Dark background */
+    --foreground: 210 40% 98%;        /* Light text */
+
+    /* Muted & Secondary */
+    --muted: 217 32% 17%;             /* Dark muted */
+    --muted-foreground: 215 20% 65%;  /* Light muted text */
+
+    /* Border & Input */
+    --border: 217 32% 17%;            /* Dark border */
+    --input: 217 32% 17%;             /* Dark input border */
+    --ring: 160 84% 45%;              /* Focus ring */
+
+    /* Destructive (for errors) */
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Card */
+    --card: 222 47% 11%;              /* Dark card background */
+    --card-foreground: 210 40% 98%;   /* Light text on card */
+
+    /* Popover */
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Secondary */
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary via-primary/90 to-accent/80;
+  }
+  
+  .gradient-hero {
+    @apply bg-gradient-to-br from-primary/10 via-accent/5 to-background;
+  }
+  
+  .gradient-accent {
+    @apply bg-gradient-to-br from-primary/10 via-accent/10 to-primary/5;
+  }
+  
+  .gradient-cta {
+    @apply bg-gradient-to-br from-primary via-primary/95 to-accent;
+  }
+
+  .luxury-card {
+    @apply bg-gradient-to-br from-white via-white to-primary/5 border border-primary/10 shadow-xl;
+  }
+
+  .dark .luxury-card {
+    @apply bg-gradient-to-br from-card via-card to-primary/10 border-primary/20 shadow-2xl;
+  }
+
+  .premium-button {
+    @apply bg-gradient-to-r from-primary to-accent text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+  }
+
+  .glass-luxury {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl;
+  }
+
+  .dark .glass-luxury {
+    @apply bg-black/20 border-white/10;
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .glass-effect {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .islamic-glow {
+    box-shadow: 0 0 20px rgba(5, 150, 105, 0.3), 0 0 40px rgba(212, 175, 55, 0.2);
+  }
+
+  .dark .islamic-glow {
+    box-shadow: 0 0 25px rgba(5, 150, 105, 0.4), 0 0 50px rgba(212, 175, 55, 0.3);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .dark .hover-lift:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+
+  .soft-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .dark .soft-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+  
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+}

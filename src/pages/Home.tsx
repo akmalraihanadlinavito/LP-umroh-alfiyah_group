@@ -44,14 +44,14 @@ const Home = () => {
       {/* Trust Stats Section */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <div className="text-center group cursor-pointer">
               <div className="flex items-center justify-center mb-4">
                 <div className="p-4 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors soft-shadow">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <p className="text-4xl font-bold text-primary group-hover:scale-110 transition-transform">{STATS.jemaah}</p>
+              <p className="text-2xl sm:text-4xl font-bold text-primary group-hover:scale-110 transition-transform">{STATS.jemaah}</p>
               <p className="text-muted-foreground font-medium mt-2">{t('stats.pilgrims')}</p>
             </div>
             <div className="text-center group cursor-pointer">
@@ -79,16 +79,16 @@ const Home = () => {
       {/* Pain Points Section */}
       <section className="section-padding bg-muted/30 dark:bg-muted/10">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
               {t('pain.title')}
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground">
               {t('pain.subtitle')}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             <Card className="luxury-card hover-lift group">
               <CardHeader className="text-center">
                 <div className="mx-auto p-4 rounded-full bg-gradient-to-br from-destructive/10 to-destructive/20 w-fit mb-4 group-hover:scale-110 transition-all shadow-lg">
@@ -133,9 +133,11 @@ const Home = () => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="premium-button font-semibold">
-              {t('pain.solution')} <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/layanan">
+              <Button size="lg" className="premium-button font-semibold">
+                {t('pain.solution')} <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -143,20 +145,20 @@ const Home = () => {
       {/* Solution Section */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
               {t('solution.title')}
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground">
               {t('solution.subtitle')}
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Elegant App Mockup */}
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-80 h-96 bg-white dark:bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
+                <div className="w-72 sm:w-80 h-80 sm:h-96 bg-white dark:bg-card rounded-2xl shadow-xl border border-border overflow-hidden mx-auto">
                   {/* Header */}
                   <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-4 border-b border-border">
                     <div className="flex items-center justify-between">
@@ -483,7 +485,7 @@ const Home = () => {
                 <Smartphone className="mr-2 h-5 w-5" />
                 {t('final.download')}
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white/50 text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-4 backdrop-blur-sm transition-all">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold text-lg px-8 py-4 shadow-xl">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 {t('final.contact')}
               </Button>

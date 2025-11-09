@@ -32,7 +32,7 @@ const HeroCarousel = () => {
 
 
   return (
-    <div className="relative h-[90vh] overflow-hidden">
+    <div className="relative h-[70vh] sm:h-[80vh] lg:h-[90vh] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -57,7 +57,7 @@ const HeroCarousel = () => {
       {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl text-white">
+          <div className="max-w-2xl text-white text-center sm:text-left">
             <div className="mb-6 opacity-0 animate-fade-in" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
               <span className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full text-sm font-medium border border-white/20 shadow-lg">
                 <Sparkles className="h-4 w-4 text-accent" />
@@ -65,7 +65,7 @@ const HeroCarousel = () => {
               </span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight opacity-0 animate-fade-in" style={{animationDelay: '0.7s', animationFillMode: 'forwards'}}>
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight opacity-0 animate-fade-in" style={{animationDelay: '0.7s', animationFillMode: 'forwards'}}>
               <span className="bg-gradient-to-r from-white via-accent to-white bg-clip-text text-transparent">
                 {t('hero.title')}
               </span>
@@ -73,12 +73,12 @@ const HeroCarousel = () => {
               <span>{t('hero.subtitle')}</span>
             </h1>
             
-            <p className="text-xl mb-8 leading-relaxed opacity-90 opacity-0 animate-fade-in" style={{animationDelay: '0.9s', animationFillMode: 'forwards'}}>
+            <p className="text-base sm:text-xl mb-6 sm:mb-8 leading-relaxed opacity-90 opacity-0 animate-fade-in" style={{animationDelay: '0.9s', animationFillMode: 'forwards'}}>
               {t('hero.description')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in" style={{animationDelay: '1.1s', animationFillMode: 'forwards'}}>
-              <Button size="lg" className="text-lg px-8 py-4 bg-white text-primary hover:bg-white/90 shadow-2xl font-semibold">
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary hover:bg-white/90 shadow-2xl font-semibold">
                 <Sparkles className="mr-2 h-5 w-5" />
                 {t('hero.start')}
               </Button>
@@ -105,9 +105,9 @@ const HeroCarousel = () => {
       </div>
 
       {/* Slide Info */}
-      <div className="absolute bottom-8 right-8 text-white text-right backdrop-blur-sm bg-black/20 p-4 rounded-lg">
-        <h3 className="text-xl font-bold mb-1">{slides[currentSlide].title}</h3>
-        <p className="text-sm opacity-90">{slides[currentSlide].subtitle}</p>
+      <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 text-white text-right backdrop-blur-sm bg-black/20 p-3 sm:p-4 rounded-lg max-w-xs">
+        <h3 className="text-lg sm:text-xl font-bold mb-1">{slides[currentSlide].title}</h3>
+        <p className="text-xs sm:text-sm opacity-90">{slides[currentSlide].subtitle}</p>
       </div>
     </div>
   )

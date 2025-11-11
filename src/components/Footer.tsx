@@ -13,9 +13,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{APP_TITLE}</h3>
-              <p className="text-sm text-muted-foreground">{APP_TAGLINE}</p>
+              <p className="text-sm text-muted-foreground">{t('footer.tagline')}</p>
             </div>
-            <p className="text-sm text-muted-foreground">{APP_DESCRIPTION}</p>
+            <p className="text-sm text-muted-foreground">{t('footer.description')}</p>
             <div className="flex space-x-4">
               <Facebook size={20} className="text-muted-foreground hover:text-primary cursor-pointer" />
               <Instagram size={20} className="text-muted-foreground hover:text-primary cursor-pointer" />

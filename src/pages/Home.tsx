@@ -286,14 +286,14 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <ServiceCard icon={Plane} title="Antar-Jemput Bandara" description="Layanan transportasi dari/ke bandara dengan driver berpengalaman" />
-            <ServiceCard icon={Users} title="Mutawwif Berpengalaman" description="Bimbingan ibadah dari ahli yang berpengalaman puluhan tahun" />
-            <ServiceCard icon={MapPin} title="Tur Ziarah Eksklusif" description="Kunjungi tempat bersejarah dengan panduan lengkap" />
-            <ServiceCard icon={ShoppingBag} title="Oleh-Oleh Praktis" description="Pesan souvenir berkualitas tanpa repot berbelanja" />
-            <ServiceCard icon={Utensils} title="Kuliner Halal" description="Makanan lezat dan terjamin halal dari chef terpercaya" />
-            <ServiceCard icon={Package} title="Perlengkapan Umrah" description="Sewa perlengkapan berkualitas dengan harga terjangkau" />
-            <ServiceCard icon={Phone} title="SOS Button 24/7" description="Bantuan darurat kapan saja dengan respons cepat" />
-            <ServiceCard icon={CreditCard} title="Bayar Fleksibel" description="Berbagai metode pembayaran yang aman dan mudah" />
+            <ServiceCard icon={Plane} title={t('features.service.0.title')} description={t('features.service.0.desc')} />
+            <ServiceCard icon={Users} title={t('features.service.1.title')} description={t('features.service.1.desc')} />
+            <ServiceCard icon={MapPin} title={t('features.service.2.title')} description={t('features.service.2.desc')} />
+            <ServiceCard icon={ShoppingBag} title={t('features.service.3.title')} description={t('features.service.3.desc')} />
+            <ServiceCard icon={Utensils} title={t('features.service.4.title')} description={t('features.service.4.desc')} />
+            <ServiceCard icon={Package} title={t('features.service.5.title')} description={t('features.service.5.desc')} />
+            <ServiceCard icon={Phone} title={t('features.service.6.title')} description={t('features.service.6.desc')} />
+            <ServiceCard icon={CreditCard} title={t('features.service.7.title')} description={t('features.service.7.desc')} />
           </div>
 
           <div className="text-center">
@@ -391,27 +391,27 @@ const Home = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <ServiceCard 
               icon={Car} 
-              title="Transportation" 
-              description="Antar-jemput bandara dan transportasi dalam kota"
-              price="Mulai dari Rp 350.000"
+              title={t('services.catalog.0.title')} 
+              description={t('services.catalog.0.desc')}
+              price={t('services.catalog.0.price')}
             />
             <ServiceCard 
               icon={Users} 
-              title="Tour & Guidance" 
-              description="Mutawwif berpengalaman dan tur ziarah"
-              price="Mulai dari Rp 500.000"
+              title={t('services.catalog.1.title')} 
+              description={t('services.catalog.1.desc')}
+              price={t('services.catalog.1.price')}
             />
             <ServiceCard 
               icon={Utensils} 
-              title="Culinary & Souvenirs" 
-              description="Kuliner halal dan oleh-oleh khas Saudi"
-              price="Mulai dari Rp 200.000"
+              title={t('services.catalog.2.title')} 
+              description={t('services.catalog.2.desc')}
+              price={t('services.catalog.2.price')}
             />
             <ServiceCard 
               icon={Package} 
-              title="Equipment & Special Needs" 
-              description="Perlengkapan umrah dan kebutuhan khusus"
-              price="Mulai dari Rp 150.000"
+              title={t('services.catalog.3.title')} 
+              description={t('services.catalog.3.desc')}
+              price={t('services.catalog.3.price')}
             />
           </div>
 
